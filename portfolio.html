@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio | Kelly Williams</title>
+  	<link rel="stylesheet" type="text/css" href="main.css">
+	<script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+	<script language="javascript" type="text/javascript" src="js/mini-sketches.js"></script>
+	<style type="text/css">
+		body{
+			display: flex;
+			flex-direction: column;
+		}
+		#container{
+			align-self: center;
+			padding-top: 16vh;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			width:50vw;
+
+		}
+		#container .item{
+			width: 12vw;
+			height: 12vw;
+			margin: 1vw;
+			/*padding:.5vw;*/
+			/*background-color: #ff0000;*/
+		}
+		.line-break{
+			width: 100%;
+		}
+		img:hover{
+		  opacity:0.6; /* how much transparent you want image to be*/
+		  filter:alpha(opacity=60); 
+		  -webkit-opacity:0.6; 
+		  -moz-opacity:0.6; 
+		}
+
+		@media only screen and (max-width: 600px) {
+			#container {
+		    
+				display: flex;
+				flex-direction: column;
+		  	}
+		  	img{
+		  		width: 50vw;
+		  	}
+		  	.line-break{
+				width: 0%;
+			}
+		}
+
+
+	</style>
+
+</head>
+<body>
+	<div id="nav">
+		<a href="index.html">Home</a> :
+		<span>Portfolio</span>
+	</div>
+	<div id="container">
+		<a href="weather.html"><div class="item" id="weather"></div></a>
+		<a href="citrus.html"><div class="item" id="citrus"></div></a>
+		<a href="appBuilder.html"><div class="item" id="appBuilder"></div></a>
+		<a href="stack.html"><div class="item" id="stack"></div></a>
+		<a href="aquarium.html"><div class="item" id="aqua"></div></a>
+		<a href="flappy.html"><div class="item" id="flappy"></div></a>
+	</div>
+
+</body>
+</html>

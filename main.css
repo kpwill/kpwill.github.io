@@ -1,0 +1,12 @@
+@font-face { font-family: MajorMonoDisplay; src: url('fonts/MajorMonoDisplay-Regular.ttf'); }
+@font-face { font-family:Montserrat; src: url('fonts/Montserrat-Regular.ttf'); }
+body{ font: 16px Helvetica, Sans-Serif; line-height: 24px;}
+#nav a {font-family:Montserrat;
+	color: #36c9d1; 
+	text-decoration: none; 
+	border-bottom: 1px dotted #36c9d1; }
+#nav a:hover { font-style: italic; }
+#nav{padding: 1vw;}
+#nav span{ font-family: Montserrat;}
+.title{font-family: MajorMonoDisplay;}
+p,h4,li,.mont{font-family: Montserrat;}

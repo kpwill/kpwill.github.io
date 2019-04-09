@@ -1,0 +1,95 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <title>Kelly Williams | App Builder</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/p5.dom.js"></script>
+  <script language="javascript" type="text/javascript" src="js/section.js"></script>
+  <script language="javascript" type="text/javascript" src="js/appBuilder.js"></script>
+
+  <style type="text/css">
+    #sketch{
+      width:100vw;
+      display:flex;
+      padding:3vw;
+      /*position: relative;*/
+      flex-wrap: wrap;
+    }
+    #builder{
+      width: 44vw;
+      height: 80vh;
+      position: relative;
+    }
+    #controls{
+      width: 44vw;
+      height: 80vh;
+      padding: 1vw;
+      /*padding-top: 15vh;*/
+      display: flex;
+      /*align-items: center;*/
+      justify-content: center;
+    }
+    #caption{
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    #caption-inner{
+      width: 70vw;
+    }
+    button{
+      background-color: #36c9d1;
+      border: none;
+      border-radius:8px;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      font-size: 16px;
+      margin: 4px 2px;
+    }
+    @media only screen and (max-width: 600px) {
+      #sketch{
+        flex-direction: column;
+      }
+      #controls, #builder{
+        width:80vw;
+      }
+}
+  </style>
+</head>
+
+<body>
+  <div id="nav">
+    <a href="index.html">Home</a> :
+    <a href="portfolio.html">Portfolio</a> :
+    <span>App Builder</span>
+  </div>
+  <div id="sketch">
+    <div id="builder" ondblclick="doubleClicked()"></div>
+    <div id="controls">
+      <div id="controls-inner">
+        <h4>Choose your navigation style: Hamburger, Tabs, or None.</h4>
+        <div id="navButtons"></div>
+        
+        <h4>Choose your logo placement: Center, Right, or None.</h4>
+        <div id="logoButtons"></div>
+        
+        <h4>Insert sections: Image, Text, Button, or Custom.</h4>
+        <div id="sectButtons"></div>
+      </div>
+    </div>
+  </div>
+  <div id="caption">
+      <div id="caption-inner">
+        <h3 class="title">App Builder, April 2019</h3>
+        <p>App template designer created for Palisadian Apps, a Los Angeles company that develops apps for local artists, professionals, and businesses.  When submitting an app proposal, individuals can use this app builder to create a basic mock-up of their app design and submit it to the developers at Palisadian Apps.<br><br>
+        Use the buttons to choose your navigation style and logo placement.  The remaing buttons will insert customizable sections that you can drag to move and resize with the handles. For text & custom sections, double click on the section to insert your own text. To delete a section, drag it to the trash icon.<br><br>
+        Have fun and get creative!</p>
+      </div>
+  </div>
+</body>
+</html>

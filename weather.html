@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Kelly Williams | Weather</title>
+  	<link rel="stylesheet" type="text/css" href="main.css">
+	<script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+	<script language="javascript" type="text/javascript" src="js/weather.js"></script>
+	<script language="javascript" type="text/javascript" src="js/weather-types.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="libraries/p5.geolocation.js"></script>
+	<style type="text/css">
+		#container{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+
+		#sketch{
+			width: 70vw;
+			height: 40vw;
+			margin-top:5vh;
+			position: relative;
+		}
+		#caption{
+			width:70vw;
+			padding: 3vw;
+		}
+	</style>
+</head>
+<body>
+	<div id="nav">
+		<a href="index.html">Home</a> :
+		<a href="portfolio.html">Portfolio</a> :
+		<span>Weather</span>
+	</div>
+	<div id="container">
+		<div id="sketch"></div>
+		<div id="caption">
+			<h3 class="title">Weather, March 2018</h3>
+			<p>Interactive, dynamic weather app that will grab your current location, and/or accept input for places around the world.  The sketch displays animated representations of various weather types, including but not limited to: rain, snow, clouds, sun, and fog.  Type in various cities, zip codes, or latitude/longitude coordinates to see the weather around the world.<br><br>
+			Have fun and explore!</p>
+		</div>
+	</div>
+
+</body>
+</html>
