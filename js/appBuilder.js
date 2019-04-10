@@ -35,6 +35,10 @@ function windowResized(){
   trashY = height - (trashH + 10);
   phoneWidth = width * .5;
   phoneHeight = phoneWidth * 1.875;
+  if(phoneHeight > height){
+    phoneHeight = height * .8;
+    phoneWidth = phoneHeight/1.875;
+  }
 }
 
 function setup() {
@@ -89,9 +93,10 @@ function setup() {
 
   phoneWidth = width * .5;
   phoneHeight = phoneWidth * 1.875;
-  
-  //phoneWidth = width * .22;
-  //phoneHeight = phoneWidth * 1.875;
+  if(phoneHeight > height){
+    phoneHeight = height * .8;
+    phoneWidth = phoneHeight/1.875;
+  }
   
   topBar = false;
   bottomBar = false;

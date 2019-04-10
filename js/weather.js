@@ -165,7 +165,7 @@ function draw() {
 	
 	//update time
 	if(second() == 0){
-		var url = 'http://api.apixu.com/v1/current.json?key=8812c17c42514e19ae4201716191402&q=' + currCoords;
+		var url = 'https://api.apixu.com/v1/current.json?key=8812c17c42514e19ae4201716191402&q=' + currCoords;
 		loadJSON(url,updateTime);
 	}
 	
@@ -202,7 +202,7 @@ function updateTime(weather){
 function newWeather(){
 	var place = input.value();
 	input.value('');
-	var url = 'http://api.apixu.com/v1/current.json?key=8812c17c42514e19ae4201716191402&q=' + place;
+	var url = 'https://api.apixu.com/v1/current.json?key=8812c17c42514e19ae4201716191402&q=' + place;
 	loadJSON(url,gotWeather);
 }
 
@@ -210,7 +210,7 @@ function getPos(position){
 	currLat = position.coords.latitude;
 	currLong = position.coords.longitude;
 	var place = "" + currLat + "," + currLong;
-	var url = 'http://api.apixu.com/v1/current.json?key=8812c17c42514e19ae4201716191402&q=' + place;
+	var url = 'https://api.apixu.com/v1/current.json?key=8812c17c42514e19ae4201716191402&q=' + place;
 	loadJSON(url,gotWeather);
 }
 
