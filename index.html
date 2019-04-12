@@ -1,13 +1,8 @@
-<!-- TO DO:
-FIX APP BUILDER BUTTONS & DOUBLE CLICK FUNCTIONALITY -->
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Kelly Williams</title>
-	<head>
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-
+  	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
 	<script language="javascript" type="text/javascript" src="libraries/p5.dom.js"></script>
 	<script language="javascript" type="text/javascript" src="js/index-bg.js"></script>
@@ -41,13 +36,12 @@ FIX APP BUILDER BUTTONS & DOUBLE CLICK FUNCTIONALITY -->
 		}
 
       	h1{
-			/*font-family: IBMPlexSans;*/
 			font-family: MajorMonoDisplay;
 			font-size: 5vw;
 			height: 1.5em;
-			/*line-height: 1.5em;*/
 			text-align: justify;
 			text-align-last: justify;
+
 		}
 		/*to justify it*/
 		h1:after {
@@ -63,9 +57,9 @@ FIX APP BUILDER BUTTONS & DOUBLE CLICK FUNCTIONALITY -->
 			text-decoration: none;
 			color: #36c9d1;
       	}
-      	/*#name:hover{
-      		text-transform: lowercase;
-      	}*/
+      	.first{
+      		font-size: 3vw;
+      	}
       	#links{
       		display: flex;
       		flex-direction: row;
@@ -77,17 +71,29 @@ FIX APP BUILDER BUTTONS & DOUBLE CLICK FUNCTIONALITY -->
       	#links a:hover{
       		font-style: italic;
       	}
+      	@media only screen and (max-width: 600px) {
+	      h1{
+	        font-size: 10vw;
+	        height: auto;
+	      }
+	      a{
+	      	font-size: 4vw;
+	      }
+	      .first{
+	      	font-size: 5vw;
+	      }
+	    }
 	</style>
 	
 </head>
 <body>
 	<div id="container">
 		<div id="name">
-			<h1>Kelly&nbsp;Williams</h1>
+			<h1>Kelly Williams</h1>
 		</div>
 		<div id="links">
-			<a href="resume.html" #res><span style="font-size: 3vw;">R</span>ESUME</a>
-			<a href="portfolio.html" #port><span style="font-size: 3vw;">P</span>ORTFOLIO</a>
+			<a href="resume.html" #res><span class="first">R</span>ESUME</a>
+			<a href="portfolio.html" #port><span class="first">P</span>ORTFOLIO</a>
 		</div>
 	</div>
 

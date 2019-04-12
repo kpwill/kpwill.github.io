@@ -24,6 +24,12 @@ function windowResized(){
 	var clientHeight = document.getElementById('sketch').clientHeight;
     var clientWidth = document.getElementById('sketch').clientWidth;
 	resizeCanvas(clientWidth, clientHeight);
+	input.size(width*.25,width*.04);
+	input.position(width/2-input.width/2,20);
+	button.size(input.width*.3, input.height);
+  	button.position(input.x + input.width + 10, 20);
+  	var fontSize = str(width*.04)
+	input.style('font-size', fontSize)
 }
 
 function setup(){
@@ -33,7 +39,6 @@ function setup(){
 	canvas.parent("sketch");
 	
 	textFont('Helvetica');
-	textSize(30);
 	textAlign(CENTER,CENTER);
 	
 	navigator.geolocation.getCurrentPosition(getPos);
@@ -51,16 +56,19 @@ function setup(){
 	nightFog2 = color(135, 145, 163,0);
 	
 	input = createInput();
-	input.size(300,40);
-	input.style('font-size', '20px');
+	// input.size(300,40);
+	input.size(width*.3,width*.04);
+	var fontSize = str(width*.04)
+	input.style('font-size', fontSize);
 	input.parent("sketch");
 	input.position(width/2-input.width/2,20);
 
 	// input.position(0,0);
 	// console.log(canvas.x);
 	
-	button = createButton('submit');
-	button.size(50,45);
+	button = createButton('Go');
+	// button.size(50,45);
+	button.size(input.width*.3, input.height);
 	button.parent("sketch");
   	button.position(input.x + input.width + 10, 20);
   	button.mousePressed(newWeather);
@@ -150,16 +158,18 @@ function draw() {
 	strokeWeight(5);
 	stroke(red(bgColor),green(bgColor),blue(bgColor),150);
 	fill(255);
+	textSize(width*.05);
+	var y = input.y + input.height + width * .05;
 	if(typeof tempC == 'undefined'){
-		text("Loading...",width/2,150);
+		text("Loading...",width/2,y);
 	}else{
-		text(city, width/2, 100);
-		text(currTime+":"+nf(second(),2),width/2, 150);
-		text(condition, width/2, 200);
+		text(city, width/2, y);
+		text(currTime+":"+nf(second(),2),width/2, y + width * .05);
+		text(condition, width/2, y + width * .1);
 		if(celcius){
-			text(tempC + " °C", width/2, 250);
+			text(tempC + " °C", width/2, y + width * .15);
 		}else{
-			text(tempF + " °F", width/2, 250);
+			text(tempF + " °F", width/2, y + width * .15);
 		}
 	}
 	

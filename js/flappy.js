@@ -25,7 +25,8 @@ function setup(){
 
 function draw() {
 	background(142, 225, 255);
-	
+	textSize(width*.06);
+
 	if(firstRun){
 		bird.display(skin);
 		fill("#FFFFFF");
@@ -55,7 +56,6 @@ function draw() {
 		bird = new Bird();
 		bird.display(skin);
 		fill("#FFFFFF");
-		textSize(32);
 		var gameOverText = "GAME OVER \n CLICK TO RESTART \n SCORE: " + score;
 		text(gameOverText, width/2,height/2);
 	}

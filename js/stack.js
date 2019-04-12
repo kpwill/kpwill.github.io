@@ -13,6 +13,7 @@ function windowResized(){
 	var clientHeight = document.getElementById('sketch').clientHeight;
     var clientWidth = document.getElementById('sketch').clientWidth;
 	resizeCanvas(clientWidth, clientHeight);
+	textSize(width*.05);
 }
 
 function setup(){
@@ -29,13 +30,14 @@ function setup(){
 				color(229, 148, 50), color(249, 210, 109)];
 	noStroke();
 	
-	textSize(22);
 	textAlign(CENTER,CENTER);
 	// console.log("setup");
 }
 
 function draw() {
 	background(0);
+
+	textSize(width*.05);
 	
 	if(playing){
 		fill(255);

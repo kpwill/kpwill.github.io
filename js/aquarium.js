@@ -1,8 +1,8 @@
 var fishies = [];
 var species = [];
 
-var wavelength = 400;
-var amplitude = 20;
+var wavelength;
+var amplitude;
 var theta = 0;
 var dx;
 var yValues;
@@ -30,6 +30,9 @@ function setup(){
 		fishies.push( new fish());
 		fishies[i].pos.x = random(width);
 	}
+
+	wavelength = width*.5;
+	amplitude = wavelength/20;
 	dx = TWO_PI / wavelength;
 	yValues = new Array(width);
 
@@ -42,6 +45,8 @@ function setup(){
 	}
 	
 	mouse = createVector(mouseX, mouseY);
+
+	
 }// END SETUP()
 
 function draw() {
@@ -96,13 +101,13 @@ function sineWave(){
 	
 	stroke(30, 93, 201);
 	for(x = 0; x < yValues.length; x++){
-		line(x,yValues[x]+100,x,height);
+		line(x,yValues[x]+height*.15,x,height);
 	}
 
 } // END SINEWAVE()
 
 function fish(){
-	this.size = createVector(random(50,100),0);
+	this.size = createVector(random(width*.05,width*.1),0);
 	this.size.y = this.size.x * random(.4,.9);
 	
 	this.vel = createVector(random(1,2),0);
@@ -143,7 +148,7 @@ function fish(){
 		//eye
 		strokeWeight(1);
 		stroke(255);
-		ellipse(this.pos.x+this.size.x*.3,this.pos.y,9,9);
+		ellipse(this.pos.x+this.size.x*.3,this.pos.y,this.size.y/5,this.size.y/5);
 		
 	}
 	
@@ -187,7 +192,7 @@ function seaweed(){
 	this.amp = 5;
 	
 	this.display = function(){
-		strokeWeight(10);
+		strokeWeight(width*.012);
 		stroke(29, this.blue, 112);
 		line(this.x2,height-this.h,this.x1,this.y);
 	}
