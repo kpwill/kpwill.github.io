@@ -5,7 +5,7 @@ function setup() {
 	createCanvas(windowWidth, windowHeight);
 	background(250);
 	noStroke();
-	nameInput = createInput('');
+	nameInput = createInput();
 	nameInput.size(width,50);
 	nameInput.style('font-size', '20px');
 	nameInput.position(0,20);
